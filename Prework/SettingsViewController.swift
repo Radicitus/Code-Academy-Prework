@@ -11,14 +11,39 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var darkModeSwitch: UISwitch!
     
-    
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let isDarkMode = defaults.bool(forKey: "isDarkMode")
+        if isDarkMode {
+            overrideUserInterfaceStyle = .dark
+            darkModeSwitch.isOn = true
+        } else {
+            overrideUserInterfaceStyle = .light
+            darkModeSwitch.isOn = false
+        }
     }
+    
+    @IBAction func darkModeToggle(_ sender: Any) {
+        let isDarkMode = defaults.bool(forKey: "isDarkMode")
+        
+        if isDarkMode {
+            darkModeSwitch.isOn = false
+            overrideUserInterfaceStyle = .light
+            defaults.set(false, forKey: "isDarkMode")
+        } else {
+            darkModeSwitch.isOn = true
+            overrideUserInterfaceStyle = .dark
+            defaults.set(true, forKey: "isDarkMode")
+        }
+        
+        defaults.synchronize()
+    }
+    
+    
     
     /*
     // MARK: - Navigation

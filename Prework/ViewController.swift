@@ -29,6 +29,16 @@ class ViewController: UIViewController {
         self.title = "Tip Calculator"
         billAmountTextField.becomeFirstResponder()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let isDarkMode = defaults.bool(forKey: "isDarkMode")
+        if isDarkMode {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+            
+        }
+    }
 
     @IBAction func calculateTip(_ sender: Any) {
         let bill = Double (billAmountTextField.text!) ?? 0
