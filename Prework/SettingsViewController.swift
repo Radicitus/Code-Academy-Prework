@@ -20,31 +20,6 @@ class SettingsViewController: UIViewController {
         
     }
     
-    //Enable/Disable dark mode
-    @IBAction func toggleDarkMode(_ sender: Any) {
-        let isDarkModeOn = defaults.bool(forKey: "isDarkModeOn")
-        
-        if isDarkModeOn {
-            defaults.set(false, forKey: "isDarkModeOn")
-        } else {
-            defaults.set(true, forKey: "isDarkModeOn")
-        }
-        defaults.synchronize()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let isDarkModeOn = defaults.bool(forKey: "isDarkModeOn")
-        
-        if isDarkModeOn {
-            overrideUserInterfaceStyle = .dark
-            darkModeSwitch.setOn(true, animated: true)
-        } else {
-            overrideUserInterfaceStyle = .light
-            darkModeSwitch.setOn(false, animated: true)
-        }
-    }
-    
-    
     /*
     // MARK: - Navigation
 
