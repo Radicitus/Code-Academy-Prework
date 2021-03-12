@@ -36,7 +36,6 @@ class ViewController: UIViewController {
             overrideUserInterfaceStyle = .dark
         } else {
             overrideUserInterfaceStyle = .light
-            
         }
     }
 

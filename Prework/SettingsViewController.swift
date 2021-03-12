@@ -16,7 +16,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let isDarkMode = defaults.bool(forKey: "isDarkMode")
         if isDarkMode {
             overrideUserInterfaceStyle = .dark
