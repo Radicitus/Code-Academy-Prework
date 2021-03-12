@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.title = "Tip Calculator"
+        billAmountTextField.becomeFirstResponder()
     }
 
     @IBAction func calculateTip(_ sender: Any) {

@@ -27,7 +27,7 @@
                                 <rect key="frame" x="227" y="102" width="147" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="mlM-e5-XYE"/>
                                     <action selector="changeSplitValue:" destination="BYZ-38-t0r" eventType="editingChanged" id="7ij-6t-6Pz"/>
